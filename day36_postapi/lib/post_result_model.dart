@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 import 'dart:async';
 
@@ -26,5 +28,8 @@ class PostResult {
       "name": name,
       "job": job,
     });
+    var jsonObject = json.decode(apiResult.body);
+
+    return PostResult.createPostResult(jsonObject);
   }
 }

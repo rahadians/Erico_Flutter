@@ -27,6 +27,7 @@ class _MyAppState extends State<MyApp> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
+
               (postResult != null)
                   ? postResult.id +
                       " | " +
@@ -36,7 +37,8 @@ class _MyAppState extends State<MyApp> {
                       " | " +
                       postResult.created
                   : "Data Tidak Ada",
-            ),
+             ),
+
             ElevatedButton(
                 onPressed: () {
                   PostResult.connectToAPI("Badu", "Dokter")
